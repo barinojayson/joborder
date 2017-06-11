@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Eloquent;
 
-class CustomerOffer extends Eloquent
+class Deal_Criteria extends Eloquent
 {
-    protected $table = 'customer_offers';
+    protected $table = 'deal_criteria';
 
     public $timestamps = false;
 

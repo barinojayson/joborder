@@ -6,7 +6,7 @@ use Eloquent;
 
 class Deal extends Eloquent
 {
-    protected $table = 'deal';
+    protected $table = 'deals';
 
     public $timestamps = false;
 
