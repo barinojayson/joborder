@@ -11,29 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['middleware' => 'web'], function () {
+    // customers
+	Route::get('/customer',array('uses'=>'CustomerController@index'));
+	Route::get('/customer/{id}',array('uses'=>'CustomerController@show'));
+	Route::post('/customer/add',array('uses'=>'CustomerController@save'));
+	Route::put('/customer/update/{id}',array('uses'=>'CustomerController@update'));
+	Route::put('/customer/delete/{id}',array('uses'=>'CustomerController@delete'));
 });
 
-// form sample
-Route::get('/register',function(){
-   return view('register');
-});
 
-Route::post('/user/register',array('uses'=>'UserRegistration@postRegister'));
 
-// blade sample
-Route::get('blade', function () {
-   return view('page',array('name' => 'Jayson Barino'));
-});
-
-// creating form using htmlserviceprovider sample
-Route::get('/form',function(){
-   return view('form');
-});
-
-// sample using model
-Route::get('/product',array('uses'=>'ProductController@index'));
 
 
 
