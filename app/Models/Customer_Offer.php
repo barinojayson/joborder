@@ -3,12 +3,16 @@
 namespace app\Models;
 
 use Eloquent;
+use app\Models\Deal;
 
 class Customer_Offer extends Eloquent
 {
     protected $table = 'customer_offers';
-
-    public $timestamps = false;
-
-    protected $softDelete = false;
+    protected $primaryKey = 'id';
+    public $timestamps = true;
+	
+	public function deal()
+    {
+        return $this->belongsTo(Deal::class, 'deal_id');
+    }
 }

@@ -18,7 +18,7 @@ class CustomerController extends Controller {
     {
 		$relation = [];
 		if ($request->has('include')) {
-			$relation[] = 'offer'; //returns the list of offers for customer
+			$relation[] = 'customerOffers'; //returns the list of offers for customer
 		}
         $customers = Customer::with($relation)->get();
         return $customers; // pass this to view
@@ -34,7 +34,7 @@ class CustomerController extends Controller {
     {
 		$relation = [];
 		if ($request->has('include')) {
-			$relation[] = 'offer'; //returns the list of offers for customer
+			$relation[] = 'customerOffers'; //returns the list of offers for customer
 		}
         $customer = Customer::with($relation)->find($id);
         return $customer; //pass to view

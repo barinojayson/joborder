@@ -19,6 +19,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('/customer/add',array('uses'=>'CustomerController@save'));
 	Route::put('/customer/update/{id}',array('uses'=>'CustomerController@update'));
 	Route::put('/customer/delete/{id}',array('uses'=>'CustomerController@delete'));
+	Route::post('/shop/add',array('uses'=>'CheckoutProductController@addToCart'));
 });
 
 

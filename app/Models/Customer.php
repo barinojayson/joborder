@@ -11,7 +11,7 @@ class Customer extends Eloquent
     protected $primaryKey = 'id';
     public $timestamps = true;
 	
-	public function offer()
+	public function customerOffers()
     {
         return $this->hasMany(Customer_Offer::class, 'customer_id', 'id');
     }
