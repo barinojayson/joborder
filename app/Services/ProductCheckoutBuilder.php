@@ -35,12 +35,21 @@ class ProductCheckoutBuilder
 	
 	public function getPriceDeals($product_id)
 	{
+		//@todo
+		// get all customer offers
 		$this->getCustomerDeals();
+		
+		// map $this->order_details to customer offers
+		// calculate if price needs to be discounted
 	}
 	
 	public function setFreebie($product_id)
 	{
+		//@todo
+		// map $this->order_details to customer offers
+		// determine if customer is eligible for freebies
 		
+		//set $this->order_freebies;
 	}
 	
 	public function getCustomerDeals()
@@ -86,9 +95,12 @@ class ProductCheckoutBuilder
 			$order_detail->price = $this->getPriceDeals($product->product_id);
 			$order_detail->discount = 0; //create function to get the discount
 			$order_detail->save();
-			
-			//create data for freebie also
 		});
+		
+		//@todo
+		//evaluate $this->order_freebies
+		//set data 
+		//save to db
 		
 		dd($this->order_details);
 	
