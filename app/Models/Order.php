@@ -2,7 +2,7 @@
 
 namespace app\Models;
 
-use Eloquent;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 use app\Models\Order_Detail;
 use app\Models\Order_Freebie;
 

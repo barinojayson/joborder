@@ -2,7 +2,7 @@
 
 namespace app\Models;
 
-use Eloquent;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 use app\Models\Deal;
 
 class Customer_Offer extends Eloquent
