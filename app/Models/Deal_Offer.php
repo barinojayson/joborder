@@ -1,12 +1,12 @@
 <?php
 
-namespace app\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Product extends Eloquent
+class Deal_Offer extends Eloquent
 {
-    protected $table = 'products';
+    protected $table = 'deal_offer';
 
     public $timestamps = false;
 
